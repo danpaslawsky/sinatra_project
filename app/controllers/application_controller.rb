@@ -3,14 +3,17 @@ class ApplicationController < Sinatra::Base
 
     #configure block to set path to views 
     configure do 
-        set :public_folder, 'public'
+        #sessions will be set and security
+        #set :public_folder, 'public'
         set :views, 'app/views'
     end
 
 # order of routes is important
-
+    #define general routes that dont involve a model
     #route route '/'
     get '/' do
-        erb :welcome_page
-    end
+        "welcome"
+    end 
+
+
 end    
