@@ -1,0 +1,14 @@
+this is my edit form
+
+<form action="/books/<%= @book.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+   
+    title: <input type="text" name="title" value="<%= @book.title %>"></br>
+   author: <input type="text" name="author" value="<%= @book.author %>"></br>
+   genre: <input type="text" name="book_genre"></br>
+   number of pages: <input type="text" name="number_of_pages"></br>
+   </br>
+   book review: <textarea name="book_review"><%= @book.book_review %></textarea></br>
+   </br>
+    <input type="submit" value="Edit Book">
+</form>
