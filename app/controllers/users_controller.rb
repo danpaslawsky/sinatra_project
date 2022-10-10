@@ -26,12 +26,17 @@ class UsersController < ApplicationController
 
     post '/login' do
     #gather data from the form
-    #query my user obj
+    #create a new user obj w/ data
     user = User.find_by_username(params[:username])
+    binding.pry
     #if my user exists && pasword is correct
-        #login user
-        #redirect
+    if user && user.authenticate(params[:password])
+       #login user
+       session[:user_id] = user.id 
+       #redirect
+       redirect '/books'
     #else
+    
         #invalid login
         #redirect to '/login'
 

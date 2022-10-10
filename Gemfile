@@ -15,6 +15,7 @@ gem 'sinatra-activerecord'
 gem 'require_all'
 gem 'shotgun'
 gem 'bcrypt', '~> 3.1.18'
+gem 'sinatra-flash'
 
 group :development, :test do 
     gem 'dotenv'
