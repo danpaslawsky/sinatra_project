@@ -1,8 +1,10 @@
 Title: <%= @book.title %></br>
-Author: <%= @book.author %>
+Author: <%= @book.author %></br>
+Genre: <%= @book.book_genre %></br>
+Number of pages: <%= @book.number_of_pages %></br></br>
+Book Review: <%= @book.book_review %>
 
-
-<a href="/books/<%= @book.id %>/edit"></br>Edit Post</a>
+<a href="/books/<%= @book.id %>/edit"></br></br>Edit Book Info</a>
 
 <form action="/books/<%= @book.id %>" method="post">
     <input type="hidden" name="_method" value="delete">

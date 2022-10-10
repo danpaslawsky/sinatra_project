@@ -5,9 +5,10 @@ class ApplicationController < Sinatra::Base
 
     # configure block to set path to views 
     configure do 
-        #sessions will be set and security
-        #set :public_folder, 'public'
+        set :public_folder, 'public'
         set :views, 'app/views'
+        set :sessions, true
+        set :session_secret, ENV["SESSION_SECRET"] 
     end
 
 

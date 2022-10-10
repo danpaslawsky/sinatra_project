@@ -14,4 +14,9 @@ gem 'pry'
 gem 'sinatra-activerecord'
 gem 'require_all'
 gem 'shotgun'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.18'
+
+group :development, :test do 
+    gem 'dotenv'
+    gem 'session_secret_generator'
+  end
