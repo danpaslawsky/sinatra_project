@@ -10,9 +10,10 @@ class UsersController < ApplicationController
          #no need to make this instance variable because it is not being rendered to view page
          #instance variables is how controllers share information with views 
         user = User.new(params)
-
-        if user.username.blank? || user.email.blank? || user.password.blank? || User.find_by_email(params[:email]) || User.find_by_username(params[:username])
-           redirect '/signup'
+        aleady_user
+        if user.username.blank? || user.email.blank? || user.password.blank?
+            flash[:error] = "Error - Please fill in all required data" 
+            redirect '/signup'
         else
            user.save
            session[:user_id] = user.id #logging user in
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
         redirect '/books'
         else
         flash[:error] = "Invalid Login"    
+
         redirect '/login'
         end
     end
@@ -47,6 +49,13 @@ class UsersController < ApplicationController
         redirect '/login'
     end
 
+private
 
+    def aleady_user
+        if User.find_by_email(params[:email]) || User.find_by_username(params[:username])
+            flash[:error] = "This info matches an existing user, please login or enter different info"
+            redirect '/signup'
+        end  
+    end
     
 end

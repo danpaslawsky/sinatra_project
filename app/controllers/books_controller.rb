@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+    # <a href="/books">Books</a>
+    
     # all routes containing to books model
 
     # user just requested all the books
