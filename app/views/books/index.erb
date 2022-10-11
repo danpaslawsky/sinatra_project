@@ -2,5 +2,5 @@ index view
 </br>
 
 <% @books.each do |b| %>
-   <p><%= b.title %></p>
+   <p><%= b.title %> - <%= b.id %> <a href="/posts/<%= p.id %>" Edit </a></p>
 <% end %>

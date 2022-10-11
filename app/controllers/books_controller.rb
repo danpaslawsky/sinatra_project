@@ -22,10 +22,11 @@ class BooksController < ApplicationController
         erb :'books/show'
     end
 
+    #create new post
     post '/books' do
-        #create new post
-        #redirect user somewhere 
-        @book = Book.create(params)
+        @book = Book.new(params)
+        @book.user_id = session[:user_id]
+        @book.save
         redirect "/books/#{@book.id}"
     end
 
