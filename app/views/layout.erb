@@ -9,11 +9,29 @@
 </head>
 <body>
     <h1>Vonderbooks</h1>
+        
+    <a href="/books">Books</a>
+        <% if !logged_in? %>
+          <a href="/login">Log In</a>
+          <a href="/users/new">Sign Up</a>
+        <% else %>
+          <a href="/books/new">New Book</a>
+          <form method="get" action="/logout" style="display: inline-block;">
+            <input type="hidden" name="_method" value="delete" />
+            <input type="submit" value="Log Out" />
+          </form>
+        <% end %>
+    
+    
+    
+    
+    
         <% flash.keys.each do |type| %>
             <div data-alert class="flash <%= type %> alert-box radius">
                 <%= flash[type] %>
             </div>
         <% end %>
+
         
     <%= yield %>
 </body>

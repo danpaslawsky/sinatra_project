@@ -38,7 +38,6 @@ class UsersController < ApplicationController
         redirect '/books'
         else
         flash[:error] = "Invalid Login"    
-        #invalid login
         redirect '/login'
         end
     end

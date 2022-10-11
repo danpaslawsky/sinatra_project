@@ -2,5 +2,9 @@ index view
 </br>
 
 <% @books.each do |b| %>
-   <p><%= b.title %> - <%= b.id %> <a href="/books/<%= b.id %>/edit"> Edit </a></p>
+   <p><%= b.title %> - <%= b.id %> 
+      <% if current_user == b.user %>
+         <a href="/books/<%= b.id %>/edit">Edit</a>
+      <% end %>
+      </p>
 <% end %>
