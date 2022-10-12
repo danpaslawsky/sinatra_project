@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -29,12 +28,10 @@
         background-color:mediumspringgreen;
        }
        
-    h1{
+       h1{
         text-align: center;
-    }
-
+       }
     </style>
-
     
 </head>
 
@@ -48,14 +45,11 @@
             <a href="/signup">Sign Up</a>   &nbsp;
         <% else %>
             <a href="/books/new">New Book</a>
-        <form method="get" action="/logout" style="display: inline-block;">
-            <input type="hidden" name="_method" value="delete" />
-            <input type="submit" value="Log Out" />
-        </form>
+            <a href="/logout">Log Out</a>
         <% end %>
-    <a href="/books">Check Out What People Are Reading!</a>
+            <a href="/books">Check Out What People Are Reading!</a>
 
-       </div>
+        </div>
     </header>
 
         <% flash.keys.each do |type| %>
@@ -63,9 +57,7 @@
                 <%= flash[type] %>
             </div>
         <% end %>
-
         
     <%= yield %>
 </body>
-
 </html>
