@@ -6,23 +6,46 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="..style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href=".style.css" type="text/css"/>
     <title>Vonderbooks</title>
 
     <style>
-    body{
-        background-color: darksalmon;
-}
+       body {
+        margin:0;
+        padding: 0;
+        background-image: url(/images/92zYVF.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+       } 
+       
+       .container {
+        width: 60%;
+        margin: 0 auto;
+       }
+
+       header {
+        background-color:mediumspringgreen;
+       }
+       
+    h1{
+        text-align: center;
+    }
+
     </style>
+
+    
 </head>
 
 <body>
     <h1>Vonderbooks</h1> 
-        
+    <header>
+        <div class="container">
     
         <% if !logged_in? %>
-            <a href="/login">Log In</a>
-            <a href="/signup">Sign Up</a>
+            <a href="/login">Log In</a>   &nbsp;
+            <a href="/signup">Sign Up</a>   &nbsp;
         <% else %>
             <a href="/books/new">New Book</a>
         <form method="get" action="/logout" style="display: inline-block;">
@@ -31,6 +54,9 @@
         </form>
         <% end %>
     <a href="/books">Check Out What People Are Reading!</a>
+
+       </div>
+    </header>
 
         <% flash.keys.each do |type| %>
             <div data-alert class="flash <%= type %> alert-box radius">
