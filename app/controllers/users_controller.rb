@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
     
-    # sign up '/signup' => will be a NEW route creating a user obj
+    
     get '/signup' do 
+        #binding.pry
         erb :"users/signup"
     end
 
+    # creating a new user obj
     post '/signup' do
          #no need to make this instance variable because it is not being rendered to view page
          #instance variables is how controllers share information with views 

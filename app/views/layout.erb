@@ -38,26 +38,26 @@
 <body>
     <h1>Vonderbooks</h1> 
     <header>
-        <div class="container">
-    
-        <% if !logged_in? %>
-            <a href="/login">Log In</a>   &nbsp;
-            <a href="/signup">Sign Up</a>   &nbsp;
-        <% else %>
-            <a href="/books/new">New Book</a>
-            <a href="/logout">Log Out</a>
-        <% end %>
+        <div class="container">    
+            <% if !logged_in? %>
+                <a href="/login">Log In</a>   &nbsp;
+                <a href="/signup">Sign Up</a>   &nbsp;
+            <% else %>
+                <a href="/books/new">New Book</a>
+                <a href="/logout">Log Out</a>
+            <% end %>
             <a href="/books">Check Out What People Are Reading!</a>
-
         </div>
     </header>
+    
 
-        <% flash.keys.each do |type| %>
-            <div data-alert class="flash <%= type %> alert-box radius">
-                <%= flash[type] %>
-            </div>
-        <% end %>
+    <% flash.keys.each do |type| %>
+        <div data-alert class="flash <%= type %> alert-box radius">
+            <%= flash[type] %>
+        </div>
+    <% end %>
         
     <%= yield %>
 </body>
+
 </html>

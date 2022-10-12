@@ -1,8 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
 index view
 </br>
+</br>
+
+<h1>Everyones Current Favorite Books!</h1>
 
 <% @books.each do |b| %>
-   <p><%= b.title %> - <%= b.id %> 
+   <p><%= b.title %> 
       <% if current_user == b.user %>
          <a href="/books/<%= b.id %>/edit">Edit</a>
       <% end %>
