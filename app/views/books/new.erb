@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-responsible for redering the post form
+
+<h1>Add A New Book To Your List!<h1>
+
+<head>
+    <meta charset="utf-8" />
+</head>
 
 
-<form action="/books" method="post">
-   title: <input type="text" name="title"></br>
-   author: <input type="text" name="author"></br>
-   genre: <input type="text" name="book_genre"></br>
-   number of pages: <input type="text" name="number_of_pages"></br>
-   </br>
-   book review: <textarea name="book_review"></textarea></br>
-   </br>
-    <input type="submit" value="Create Book">
-</form>
+<body>
+
+    <form action="/books" method="post">
+        <div>
+            <p>Title: <input type="text" name="title"></br></p>
+                <p>Author: <input type="text" name="author"></br></p>
+                    <p>Genre: <input type="text" name="book_genre"></br></p>
+                    <p>Number of pages: <input type="text" name="number_of_pages"></br></br></p>
+                <p>Book review: <textarea name="book_review"></textarea></br></br></p>
+            <p><input type="submit" value="Create Book"></p>
+        </div>    
+    </form>
+
+
+</body>

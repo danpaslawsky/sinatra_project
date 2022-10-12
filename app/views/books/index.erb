@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-index view
-</br>
-</br>
-
 <h1>Everyones Current Favorite Books!</h1>
 
-<% @books.each do |b| %>
-   <p><%= b.title %> 
-      <% if current_user == b.user %>
-         <a href="/books/<%= b.id %>/edit">Edit</a>
+<header>
+   <meta charset="utf-8"/>
+</header>
+
+
+<body>
+   <div>
+      <% @books.each do |b| %>
+         <p><%= b.title %>
+         <% if current_user == b.user %>
+            <a href="/books/<%= b.id %>/edit">Edit</a>
+         <% end %>
+         
       <% end %>
-      </p>
-<% end %>
+   </div>
+
+</body>

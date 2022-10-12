@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
 
+<head>
+    <meta charset="utf-8"/>
 </head>
 
 
 <body>
+
+<h1>Edit Your Book Entry Here<h1>
 
     <form action="/books/<%= @book.id %>" method="post">
     <input type="hidden" name="_method" value="patch">
