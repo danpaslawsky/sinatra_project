@@ -17,9 +17,9 @@ Simply sign up for free, create and store your exciting list of books!
 2. Run 'shotgun' from your command line. Then you can go to your browser and view the application.
 3. Visit localhost:[port-number] (the port number will be specified after running shotgun).
 
-#### Contributing 
+### Contributing 
 Bug reports and pull requests are welcome on GitHub at https://github.com/danpaslawsky/sinatra_project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-##### License
+### License
 The app is available as open source under the terms of the MIT License. MIT © https://github.com/danpaslawsky/sinatra_project/blob/main/LICENSE
 
