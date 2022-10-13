@@ -26,8 +26,17 @@ class BooksController < ApplicationController
     post '/books' do
         @book = Book.new(params)
         @book.user_id = session[:user_id]
-        @book.save
-        redirect "/books/#{@book.id}"
+        book_already_exists
+         if @book.title.blank? #|| user.email.blank? || user.password.blank?
+             flash[:error] = "Error - Please fill in a Title for your new book entry" 
+             redirect '/books/new'
+         else
+            @book.save
+           redirect '/books'
+         end
+        #@book.save
+        #redirect "/books/#{@book.id}"
+        
     end
 
     # user just requested to see an edit form for a post
@@ -64,6 +73,16 @@ private
             flash[:error] = "You can't make this edit, you are not the owner of this account"
             redirect '/books'
         end    
+    end
+
+
+    private
+
+    def book_already_exists
+        if Book.find_by_title(params[:title]) && Book.find_by_author(params[:author])
+            flash[:error] = "This info matches an existing book in your library - Please Enter a New Book"
+            redirect '/books/new'
+        end  
     end
 
 end

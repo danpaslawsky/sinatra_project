@@ -1,4 +1,4 @@
-Specifications for the Sinatra Assessment; aka Vonderbooks
+Specifications for the Sinatra Assessment - aka Vonderbooks
 
 # Specs:
 
