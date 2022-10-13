@@ -47,6 +47,13 @@ class UsersController < ApplicationController
         redirect '/login'
     end
 
+    delete '/user/:id' do
+        @user = User.find_by(username:params[:username])
+        @user.destroy
+        redirect '/books'
+      #no view
+    end
+
 private
 
     def aleady_user

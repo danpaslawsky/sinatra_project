@@ -27,16 +27,13 @@ class BooksController < ApplicationController
         @book = Book.new(params)
         @book.user_id = session[:user_id]
         book_already_exists
-         if @book.title.blank? #|| user.email.blank? || user.password.blank?
+         if @book.title.blank?
              flash[:error] = "Error - Please fill in a Title for your new book entry" 
              redirect '/books/new'
          else
             @book.save
            redirect '/books'
-         end
-        #@book.save
-        #redirect "/books/#{@book.id}"
-        
+         end        
     end
 
     # user just requested to see an edit form for a post
