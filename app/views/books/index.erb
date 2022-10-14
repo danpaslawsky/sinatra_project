@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<h1>Everyones Current Favorite Books!</h1>
-
 <header>
    <meta charset="utf-8"/>
 </header>
 
 
 <body>
-   <div>
+
+<h1 class="body_headers">Everyones Current Favorite Books!</h1>
+
+   <div class="all_books_listed_form">
       <% @books.each do |b| %>
          <p><%= b.title %>
          <% if current_user == b.user %>
             <a href="/books/<%= b.id %>/edit">Edit</a>
          <% end %>
-         
       <% end %>
    </div>
 

@@ -1,9 +1,4 @@
-
-
-
-
-body {
-       
+body {     
   margin:0;
   padding: 0;
   background-image: url(/images/92zYVF.jpeg);
@@ -14,15 +9,63 @@ body {
 } 
        
 .container {
+padding-top: .2in;  
 width: 60%;
 margin: 0 auto;
+text-align: center;
+font-size:.3in;
 }
 
 header {
   background-color:mediumspringgreen;
+  
+}
+
+.login_form {
   text-align:center;
 }
-       
+
+.signup_form {
+  text-align:center;
+}
+
+.all_books_listed_form {
+  text-align:center;
+}
+
+.new_book_form {
+  text-align: center;
+}
+
+.edit_form {
+  text-align: center;
+}
+
+.show_edit_results_form {
+  text-align:center;
+}
+
+.app_name {
+  text-align:center;
+  font-size: .5in;
+}
+
+.body_headers {
+  text-align: center;
+}
+
+.delete_book_button {
+  text-align: center;
+}
+
+.welcome_mesage{
+  text-align: center;
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+
+
 
 
    

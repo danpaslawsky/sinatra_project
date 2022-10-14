@@ -7,27 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" type="text/css"/>
     <title>Vonderbooks</title>
-    
-    <style>
-    h1 {
-        text-align:center;
-    }
-    </style>
-
 </head>
 
-
-
 <body>
-    <h1>Vonderbooks</h1> 
+    <h1 class="app_name">Vonderbooks</h1> 
     <header>
         <div class="container">    
             <% if !logged_in? %>
-                <a href="/login">Log In</a>   &nbsp;
-                <a href="/signup">Sign Up</a>   &nbsp;
+                <a href="/login">Log In</a>             &nbsp;
+                <a href="/signup">Sign Up</a>           &nbsp;
             <% else %>
-                <a href="/books/new">New Book</a>
-                <a href="/logout">Log Out</a>
+                <a href="/books/new">New Book</a>           &nbsp;
+                <a href="/logout">Log Out</a>               &nbsp;
             <% end %>
             <a href="/books">Check Out What People Are Reading!</a>
         </div>
