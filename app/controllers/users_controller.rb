@@ -37,7 +37,7 @@ class UsersController < ApplicationController
             session[:user_id] = user.id 
             redirect '/books'
         else
-            flash[:error] = "Invalid Username or Password - Please Enter Your User Info Or Sign Up For an Account"
+            flash[:error] = "Error - Invalid Username or Password - Please Enter Your User Info Or Sign Up For an Account"
             redirect '/login'
         end
     end

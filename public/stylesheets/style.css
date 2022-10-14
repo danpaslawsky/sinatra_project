@@ -1,3 +1,12 @@
+.homepage_message {
+  font-size:1in;
+  font-style: italic;
+}
+
+.body {
+  text-align: center;
+}
+
 body {     
   margin:0;
   padding: 0;
@@ -18,7 +27,6 @@ font-size:.3in;
 
 header {
   background-color:mediumspringgreen;
-  
 }
 
 .login_form {
@@ -33,7 +41,7 @@ header {
   text-align:center;
 }
 
-.new_book_form {
+.creat_new_book_form {
   text-align: center;
 }
 
@@ -42,7 +50,7 @@ header {
 }
 
 .show_edit_results_form {
-  text-align:center;
+  text-align: center;
 }
 
 .app_name {
@@ -50,19 +58,13 @@ header {
   font-size: .5in;
 }
 
-.body_headers {
-  text-align: center;
-}
+
 
 .delete_book_button {
   text-align: center;
 }
 
-.welcome_mesage{
-  text-align: center;
-  font-size: xxx-large;
-  font-style: italic;
-}
+
 
 
 

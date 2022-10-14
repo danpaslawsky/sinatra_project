@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8"/>
 </head
 
 
-<body>
+<body class="body">
 
-<h1 class="body_headers">Here Is Your Book With Updates<h1>
+<h1 style="text-align:center">Here Is Your Book With Updates</h1>
 
     <div class="show_edit_results_form">
         <p>Title:  <%= @book.title %></br></p>
                 <p>Author:  <%= @book.author %></br></p>
                     <p>Genre:  <%= @book.book_genre %></br></p>
                 <p>Number of pages:  <%= @book.number_of_pages %></br></p>
-            <p>Book Review:  <%= @book.book_review %></p>
-        <a href="/books/<%= @book.id %>/edit">Edit Book Info</a>
+            <p>Book Review:  <%= @book.book_review %></br></p>
+        <p><a href="/books/<%= @book.id %>/edit">Edit Book Info</a></p>
     </div>
 
     <div class="delete_book_button">
-    <form action="/books/<%= @book.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Delete Book">
-    </form>
+        <form action="/books/<%= @book.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete Book">
+        </form>
     </div>
 
 </body>
