@@ -33,10 +33,11 @@ Specifications for the Sinatra Assessment - aka Vonderbooks
    X  Include user input validations
          - conditional blocks are implemented within the nessesary routes that handle the users input.
  
-   BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+   X  BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+        - gem sinatra flash installed and called upon durring validations
  
    X  Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
-      - The readme file is completed in a seperate file meeting all the requirements stated above.
+      - The readme file is completed in a seperate file, meeting all the requirements stated above.
 
 ## Confirm
 

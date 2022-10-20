@@ -1,6 +1,4 @@
 class BooksController < ApplicationController
-    # order matters when building routes. 
-    # get dynamic routes need to be after all other get routes
 
     # request all the books
     # index route
@@ -13,7 +11,7 @@ class BooksController < ApplicationController
     # user just made a request to view form to add a new book
     get '/books/new' do
         erb :'books/new'
-    end    
+    end 
 
     # user wants to see details of One book
     # show route
@@ -22,7 +20,7 @@ class BooksController < ApplicationController
         erb :'books/show'
     end
 
-    #create new post
+    #create new book
     post '/books' do
         @book = Book.new(params)
         @book.user_id = session[:user_id]
@@ -36,7 +34,7 @@ class BooksController < ApplicationController
          end        
     end
 
-    # user just requested to see an edit form for a post
+    # user just requested to see an edit form for a book
     get '/books/:id/edit' do
         get_books
         redirect_if_not_authorized
@@ -51,13 +49,15 @@ class BooksController < ApplicationController
         redirect "/books/#{@book.id}"
     end 
 
-    # user wants to delete an existing post
+    # user wants to delete an existing book
     delete '/books/:id' do
         get_books
         @book.destroy
         redirect '/books'
-      #no view
+      
     end
+
+
 
 private
 
@@ -81,5 +81,6 @@ private
             redirect '/books/new'
         end  
     end
+
 
 end

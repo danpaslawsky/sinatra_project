@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     # creating a new user obj
     post '/signup' do
          #no need to make this instance variable because it is not being rendered to view page
-         #instance variables is how controllers share information with views 
         user = User.new(params)
         aleady_user
 
@@ -18,7 +17,7 @@ class UsersController < ApplicationController
             redirect '/signup'
         else
            user.save
-           session[:user_id] = user.id #logging user in
+           session[:user_id] = user.id
            redirect '/login'
         end
     end
@@ -31,8 +30,9 @@ class UsersController < ApplicationController
 
     post '/login' do        
         #create a new user obj w/ data
+        #binding.pry
         user = User.find_by_username(params[:username])
-
+       
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id 
             redirect '/books'
@@ -51,7 +51,6 @@ class UsersController < ApplicationController
         @user = User.find_by(username:params[:username])
         @user.destroy
         redirect '/books'
-      #no view
     end
 
 private

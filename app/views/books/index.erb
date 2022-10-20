@@ -11,7 +11,7 @@
 
    <div class="all_books_listed_form">
       <% @books.each do |b| %>
-         <p><%= b.title %>
+         <p><%= b.title %> <%= b.id %>
          <% if current_user == b.user %>
             <a href="/books/<%= b.id %>/edit">Edit</a>
          <% end %>

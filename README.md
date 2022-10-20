@@ -3,7 +3,7 @@
 # Welcome 
 Welcome to the Vonderbook app! This is an easy to use CRUD, MVC app created using Sinatra and ActiveRecord to offer a fun and convenient platform to keep a list of your favorite books. 
 
-Simply sign up for free, create and store your exciting list of books!
+Simply sign up for free, then create and store your exciting list of books!
 
 ## Installation of the project can be performed locally with the following steps:
 1. Navigate to the repo on GitHub at 
