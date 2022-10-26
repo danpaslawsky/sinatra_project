@@ -10,6 +10,7 @@ class BooksController < ApplicationController
 
     # user just made a request to view form to add a new book
     get '/books/new' do
+        @categories = Category.all
         erb :'books/new'
     end 
 
@@ -22,16 +23,19 @@ class BooksController < ApplicationController
 
     #create new book
     post '/books' do
+        #binding.pry
         @book = Book.new(params)
         @book.user_id = session[:user_id]
+        #binding.pry
         book_already_exists
-         if @book.title.blank?
-             flash[:error] = "Error - Please fill in a Title for your new book entry" 
-             redirect '/books/new'
-         else
+        if @book.title.blank?
+            flash[:error] = "Error - Please fill in a Title for your new book entry" 
+            redirect '/books/new'
+        else
             @book.save
-           redirect '/books'
-         end        
+            
+            redirect '/books'
+        end        
     end
 
     # user just requested to see an edit form for a book

@@ -16,6 +16,8 @@ gem 'require_all'
 gem 'shotgun'
 gem 'bcrypt', '~> 3.1.18'
 gem 'sinatra-flash'
+gem 'faker'
+gem 'tux'
 
 group :development, :test do 
     gem 'dotenv'

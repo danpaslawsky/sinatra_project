@@ -13,7 +13,12 @@
     <div class="edit_form"> 
         <form action="/books/<%= @book.id %>" method="post">
             <input type="hidden" name="_method" value="patch">  
-                <p>title: <input type="text" name="title" value="<%= @book.title %>"></br></p>
+                
+            
+            
+            
+            
+            <p>title: <input type="text" name="title" value="<%= @book.title %>"></br></p>
                     <p>author: <input type="text" name="author" value="<%= @book.author %>"></br></p>
                     <p>number of pages: <input type="text" name="number_of_pages" value="<%= @book.number_of_pages %>"></br></br></p>
                 <p>book review: <textarea name="book_review"><%= @book.book_review %></textarea></br></br></p>

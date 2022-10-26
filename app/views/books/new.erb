@@ -10,25 +10,21 @@
 
 <h1>Add A New Book To Your List!</h1>
 
-    <div class="create_new_book_form">
-        
-    <form action="/books" method="post">
-    <form action="/categories" method="post">
-        <label for="genre">genre</label>
-            
-        <select name="genre">
-            binding.pry
-                <option value="Fiction">Fiction</option>
-                <option value="Non Fiction">Non Fiction</option>
-               
-        </select>
+    <div class="create_new_book_form">        
+        <form action="/books" method="post">
+        <label for="genre">What is the books genre:</label>
+            <select name="category_id" id="genre">
+                <% @categories.each do |c| %>
+                <option value=<%= c.id %>><%= c.genre %></option>
+                <% end %>       
+            </select>
         
                 <p>Title: <input type="text" name="title"></br></p>          
                 <p>Author: <input type="text" name="author"></br></p>
                 <p>Number of pages: <input type="text" name="number_of_pages"></br></br></p>
                 <p>Book review: <textarea name="book_review"></textarea></br></p>
 
-            <input type="submit" value="Create Book">          
+        <input type="submit" value="Create Book">          
         </form>
     </div>
 
